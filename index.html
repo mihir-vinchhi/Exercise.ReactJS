@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <body>
+        
+        <div id="content"></div>        
+        
+        <script src="bower_components/react/react.js" ></script>
+        <script src="bower_components/react/react-dom.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>  
+        
+        <script type="text/babel" src="comment.js"></script>
+        <script type="text/babel" src="comment-list.js"></script>
+        <script type="text/babel" src="comment-form.js"></script>
+        <script type="text/babel" src="comment-box.js"></script>
+        
+        <script type="text/babel">
+            var data = [
+                { id: 1, author: 'Pete Hunt', text: 'This is one comment' },
+                { id: 2, author: 'Jordan Walke', text: 'This is *another* comment' }
+            ];
+            
+            ReactDOM.render(
+                <CommentBox data={data} />,
+                document.getElementById('content')
+            );
+        </script>
+        
+    </body>
+</html>
